@@ -186,7 +186,7 @@ namespace ConsoleApp5
             {
                 case Call_outs.n:
                     {
-                        Console.Write("Введите  n = ");
+                        Console.Write("Введите  n большее 0. n = ");
                         do
                         {
                             string input = Console.ReadLine().Replace(',', '.');
