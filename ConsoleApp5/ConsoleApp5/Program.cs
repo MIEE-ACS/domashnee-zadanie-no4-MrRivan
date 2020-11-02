@@ -17,6 +17,7 @@ namespace ConsoleApp5
 
         static void task1()
         {
+            Console.WriteLine("Задание 1");
             Random random = new Random();
             int n;
             do
@@ -51,7 +52,7 @@ namespace ConsoleApp5
             Console.WriteLine("\n Номер максимального элемента");
             Console.WriteLine(Max_Number + 1);
             Console.WriteLine("Сумма членов после первого положительного числа");
-            Console.WriteLine(sum);
+            Console.WriteLine(Math.Round(sum, 2));
             double A;
             double B;
             do
@@ -85,6 +86,7 @@ namespace ConsoleApp5
 
         static void task2 ()
         {
+            Console.WriteLine("Задание 2");
             int n = 3;
             int[,] a = { { 1, 2, 3},{ 2, 3, 4 },{ 3, 4, 5 } };
             for(int i=0;i<n;i++)
@@ -205,7 +207,7 @@ namespace ConsoleApp5
                     
                 case Call_outs.A:
                     {
-                        Console.Write("Введите A менше  B и  меньше максимального эелмента массива.\n A =");
+                        Console.Write("Введите A меньше  B и  меньше максимального эелмента массива.\n A =");
                         do
                         {
                             string input = Console.ReadLine().Replace(',', '.');
