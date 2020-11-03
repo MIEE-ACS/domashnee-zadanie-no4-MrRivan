@@ -26,7 +26,7 @@ namespace ConsoleApp5
             } while (n <= 0);
             double[] Array = new double[n];
             int Max_Number = 0;
-            double Max_Number_checker = -11.0;
+            double Max_Number_checker = 0.0;
             double sum = 0;
             bool beacon = false;
             Console.WriteLine("Рандомный массив размера n");
@@ -84,14 +84,14 @@ namespace ConsoleApp5
             }
         }
 
-        static void task2 ()
+        static void task2()
         {
             Console.WriteLine("Задание 2");
             int n = 3;
-            double[,] a = { { 1, 2, 3},{ 2, 3, 4 },{ 3, 4, 5 } };
-            for(int i=0;i<n;i++)
+            double[,] a = { { 1, 2, 3 }, { 2, 3, 4 }, { 3, 4, 5 } };
+            for (int i = 0; i < n; i++)
             {
-                for(int j=0;j<n;j++)
+                for (int j = 0; j < n; j++)
                 {
                     Console.Write($"{a[i, j]}\t");
                 }
@@ -102,7 +102,7 @@ namespace ConsoleApp5
             {
                 for (int i = k + 1; i < n; i++)
                 {
-                    for (int j = k ; j < n; j++)
+                    for (int j = k; j < n; j++)
                     {
                         a[i, j] = a[i, j] - a[k, j] * (a[i, k] / a[k, k]);
                     }
@@ -137,27 +137,27 @@ namespace ConsoleApp5
             } while (beacon == false);
             for (int i = 0; i < 3; i++)
             {
-               double sum = 0;
+                double sum = 0;
                 for (int j = 0; j < 3; j++)
                 {
                     sum += a[i, j];
                 }
-                if (sum.CompareTo(number)<0)
+                if (sum.CompareTo(number) < 0)
                 {
                     Console.WriteLine($"Строка {i} сред.арифмет. меньше заданного числа");
                 }
             }
         }
-        
+
         static int Try_read_int(Call_outs call)
         {
-           int number = 0;
+            int number = 0;
             bool beacon;
             switch (call)
             {
                 case Call_outs.n:
                     {
-                        Console.Write("Введите n ");
+                        Console.Write("Введите n больше 0. n = ");
                         do
                         {
                             string input = Console.ReadLine().Replace(',', '.');
@@ -178,7 +178,7 @@ namespace ConsoleApp5
             }
             return number;
         }
-         static double Try_read_double(Call_outs call)
+        static double Try_read_double(Call_outs call)
         {
             double number = 0;
             bool beacon;
@@ -204,7 +204,7 @@ namespace ConsoleApp5
                         } while (beacon == false);
                         break;
                     }
-                    
+
                 case Call_outs.A:
                     {
                         Console.Write("Введите A меньше  B и  меньше максимального эелмента массива.\n A =");
@@ -247,7 +247,7 @@ namespace ConsoleApp5
             }
             return number;
         }
-    
+
 
 
         static void Main(string[] args)
