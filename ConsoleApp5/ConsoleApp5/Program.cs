@@ -25,7 +25,7 @@ namespace ConsoleApp5
                 n = Try_read_int(Call_outs.n);
             } while (n <= 0);
             double[] Array = new double[n];
-            int Max_Number = -1;
+            int Max_Number = 0;
             double Max_Number_checker = -11.0;
             double sum = 0;
             bool beacon = false;
@@ -42,7 +42,7 @@ namespace ConsoleApp5
                 {
                     sum += Array[i];
                 }
-                if (Math.Abs(Array[i]).CompareTo(Math.Abs(Max_Number_checker)) < 0)
+                if (Math.Abs(Array[i]).CompareTo(Math.Abs(Max_Number_checker)) > 0)
                 {
                     Max_Number_checker = Array[i];
                     Max_Number = i;
