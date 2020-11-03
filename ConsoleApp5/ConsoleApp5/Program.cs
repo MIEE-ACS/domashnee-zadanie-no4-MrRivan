@@ -88,7 +88,7 @@ namespace ConsoleApp5
         {
             Console.WriteLine("Задание 2");
             int n = 3;
-            int[,] a = { { 1, 2, 3},{ 2, 3, 4 },{ 3, 4, 5 } };
+            double[,] a = { { 1, 2, 3},{ 2, 3, 4 },{ 3, 4, 5 } };
             for(int i=0;i<n;i++)
             {
                 for(int j=0;j<n;j++)
@@ -102,7 +102,7 @@ namespace ConsoleApp5
             {
                 for (int i = k + 1; i < n; i++)
                 {
-                    for (int j = k  ; j < n; j++)
+                    for (int j = k ; j < n; j++)
                     {
                         a[i, j] = a[i, j] - a[k, j] * (a[i, k] / a[k, k]);
                     }
@@ -118,7 +118,7 @@ namespace ConsoleApp5
                 Console.WriteLine("");
             }
             bool beacon;
-            Console.WriteLine("Введите число");
+            Console.WriteLine("Введите число n, меньше которого должно быть среднее арифметическое ");
             int number = 0;
             do
             {
@@ -137,12 +137,12 @@ namespace ConsoleApp5
             } while (beacon == false);
             for (int i = 0; i < 3; i++)
             {
-               int sum = 0;
+               double sum = 0;
                 for (int j = 0; j < 3; j++)
                 {
                     sum += a[i, j];
                 }
-                if (sum<number)
+                if (sum.CompareTo(number)<0)
                 {
                     Console.WriteLine($"Строка {i} сред.арифмет. меньше заданного числа");
                 }
@@ -186,7 +186,7 @@ namespace ConsoleApp5
             {
                 case Call_outs.n:
                     {
-                        Console.Write("Введите  n = ");
+                        Console.Write("Введите  n большее 0. n = ");
                         do
                         {
                             string input = Console.ReadLine().Replace(',', '.');
