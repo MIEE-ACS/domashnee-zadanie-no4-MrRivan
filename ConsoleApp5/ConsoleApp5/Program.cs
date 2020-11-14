@@ -26,11 +26,7 @@ namespace ConsoleApp5
             } while (n <= 0);
             double[] Array = new double[n];
             int Max_Number = 0;
-<<<<<<< HEAD
             double Max_Number_checker = 0.0;
-=======
-            double Max_Number_checker = 0;
->>>>>>> 6ff3cc5ba194847ae6bc2061d14fe6ed5cc5e5de
             double sum = 0;
             bool beacon = false;
             Console.WriteLine("Рандомный массив размера n");
