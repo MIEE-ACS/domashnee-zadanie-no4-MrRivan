@@ -118,7 +118,7 @@ namespace ConsoleApp5
                 Console.WriteLine("");
             }
             bool beacon;
-            Console.WriteLine("Введите число n, меньше которого должно быть среднее арифметическое ");
+            Console.Write("Кол-во строк, в которых среднее арифметическое элементов <  ");
             int number = 0;
             do
             {
@@ -135,6 +135,7 @@ namespace ConsoleApp5
                 }
 
             } while (beacon == false);
+            bool check=false;
             for (int i = 0; i < 3; i++)
             {
                 double sum = 0;
@@ -142,10 +143,15 @@ namespace ConsoleApp5
                 {
                     sum += a[i, j];
                 }
-                if (sum.CompareTo(number) < 0)
+                if ((sum/3).CompareTo(number) < 0)
                 {
+                    check = true;
                     Console.WriteLine($"Строка {i} сред.арифмет. меньше заданного числа");
                 }
+            }
+            if(!check)
+            {
+                Console.WriteLine($"нет сторк, среднее арифметическое которых меньше {number}");
             }
         }
 
